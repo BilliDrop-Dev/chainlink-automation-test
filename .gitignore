@@ -1,0 +1,17 @@
+.encryptedKey.json
+node_modules
+yarn.lock
+.env
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts
+gas-report.txt
+typechain-types
+
+# JetBrains WebStrom
+.idea
+

@@ -1,0 +1,28 @@
+{
+  "name": "hardhat-project",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.1",
+    "hardhat-deploy": "^0.11.18",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.5.1",
+    "dotenv": "^16.0.3",
+    "prettier-plugin-solidity": "^1.0.0-beta.24"
+  },
+  "scripts": {
+    "lint": "yarn prettier --check .",
+    "lint:fix": "yarn prettier --write ."
+  },
+  "mocha": {
+    "timeout": 10000000
+  }
+}
