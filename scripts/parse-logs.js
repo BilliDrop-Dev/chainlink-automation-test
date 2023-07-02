@@ -31,7 +31,7 @@ axios.get(url).then((response) => {
     const logs = response.data.result
     const data = []
     logs.map((item) => {
-        const parsedLogItem = iface.parseLog(logs[0])
+        const parsedLogItem = iface.parseLog(item)
         const dataItem = {
             timeISO: new Date(item.timeStamp * 1000).toISOString().slice(0,-5),
             partner: parsedLogItem.args.partnerID,
