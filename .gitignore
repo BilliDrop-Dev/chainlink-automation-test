@@ -15,3 +15,8 @@ typechain-types
 # JetBrains WebStrom
 .idea
 
+# lock files
+package-lock.json
+
+# out data
+data/out

@@ -7,6 +7,7 @@ contract SimpleAutomation is AutomationCompatibleInterface {
     uint private s_interval;
     uint private s_counter;
     uint private s_lastTimestamp;
+    address payable[] private s_tickets;
 
     event CheckUpkeepCall(address indexed keeper, uint timePassed, bool upkeepNeeded);
     event PerformUpkeepCall(address indexed keeper, uint lastTimestamp, uint counter);
@@ -46,5 +47,19 @@ contract SimpleAutomation is AutomationCompatibleInterface {
 
     function setInterval(uint interval) public {
         s_interval = interval;
+    }
+
+    function getNumberOfTickets() public view returns (uint) {
+        return s_tickets.length;
+    }
+
+    function addBulkOfTickets(uint ticketsNumber) public {
+        for (uint ticketId = 0; ticketId < ticketsNumber; ticketId++) {
+            s_tickets.push(payable(msg.sender));
+        }
+    }
+
+    function resetTickets() public {
+        s_tickets = new address payable[](0);
     }
 }
